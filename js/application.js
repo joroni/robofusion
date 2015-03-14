@@ -20,7 +20,7 @@ function setupDefaultView() {
     var bodyView = viewAssembler.defaultView(); 
     
     //Setup the default view
-    var defaultView = { title: "Fro-Style Cube Finder", 
+    var defaultView = { title: "Welcome!", 
     view:  bodyView,
     };
     
@@ -33,7 +33,7 @@ function setupDefaultView() {
 
 function onMapButtonClick( event ) {
     var view = { title: "Map",
-             backLabel: (isTablet() ? "<img src='graphics/back_arrow.png'>" : " "),
+             backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.mapView(),
              scroll:false
            };
@@ -68,7 +68,7 @@ function onSearchResultMapButtonClick( event ) {
     centerPoint = new L.LatLng(centerPoint.y, centerPoint.x);
 
     var view = { title: "Map",
-             backLabel: (isTablet() ? "<img src='graphics/back_arrow.png'>" : " "),
+             backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.mapView(centerPoint),
              scroll:false
            };
@@ -80,7 +80,7 @@ function onSearchResultMapButtonClick( event ) {
 
 function onAboutViewClick( event ) {
     var view = { title: "About",
-             backLabel: (isTablet() ? "<img src='graphics/back_arrow.png'>" : " "),
+             backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.aboutView()
            };
     window.viewNavigator.pushView( view );
@@ -90,7 +90,7 @@ function onAboutViewClick( event ) {
 
 function onSearchViewClick( event ) {
     var view = { title: "List",
-             backLabel: (isTablet() ? "<img src='graphics/back_arrow.png'>" : " "),
+             backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.searchView(),
            };
     window.viewNavigator.pushView( view );
@@ -129,7 +129,7 @@ var onGeoSuccess = function(position) {
         var filtered = filterMarketsByGeo( latitude, longitude );
             
         var view = { title: "Nearby",
-             backLabel: (isTablet() ? "<img src='graphics/back_arrow.png'>" : " "),
+             backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.findNearbyView()
            };
            
@@ -149,7 +149,7 @@ function onGeoError(error) {
     //wait for transition complete
     setTimeout( function() {
         var view = { title: "Nearby",
-                 backLabel: (isTablet() ? "<img src='graphics/back_arrow.png'>" : " "),
+                 backLabel: (isTablet() ? "Back" : " "),
                  view: viewAssembler.geoPermissionDenied()
                };
         window.viewNavigator.replaceView( view );
@@ -230,7 +230,7 @@ function showMarketDetailsFromMapClick( index ) {
 function showMarketDetails( item ) { 
     var market = arrayToMarketObject(item);
     var view = { title: "Market Detail",
-             backLabel: (isTablet() ? "<img src='graphics/back_arrow.png'>" : " "),
+             backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.marketDetailsView( market )
            };
     window.viewNavigator.pushView( view );
@@ -267,7 +267,7 @@ function onSearchButtonClick( event ) {
     
     var markets = filterMarketsBySearchCriteria( criteria );
     var view = { title: "Search Results",
-             backLabel: (isTablet() ? "<img src='graphics/back_arrow.png'>" : " "),
+             backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.searchResultsView( markets, criteria )
            };
     window.viewNavigator.pushView( view );
@@ -378,7 +378,7 @@ function viewInMap( index ) {
     var market = arrayToMarketObject( markets[index] );
     
      var view = { title: market.marketName,
-             backLabel: (isTablet() ? "<img src='graphics/back_arrow.png'>" : " "),
+             backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.marketMapView( market ),
              scroll:false
            };
