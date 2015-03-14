@@ -40,7 +40,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     max-width:30%;
 }
 
-.viewNavigator_header_title {
+/*.viewNavigator_header_title {
 
 	position:absolute;
 	top:12px;
@@ -57,6 +57,22 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     -o-text-overflow: ellipsis;
     
     max-width:48%;
+}
+*/
+.viewNavigator_header_title {
+    color: #ffffff;
+    font-weight: bold;
+    left: 0;
+    margin-left: auto;
+    margin-right: 1em;
+    max-width: 48%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    text-overflow: ellipsis;
+    top: 12px;
+    white-space: nowrap;
 }
 
 .viewNavigator_headerContent {
@@ -85,11 +101,20 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 /* ANDROID BUG WORKAROUND */
-.viewNavigator_content select {
+/*.viewNavigator_content select {
 	overflow:auto;
 	position:relative;
     backface-visibility: auto;
 	-webkit-backface-visibility: auto;
+}
+*/
+
+.viewNavigator_content select {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    overflow: auto;
+    padding: 0.2em;
+    position: relative;
 }
 
 /*

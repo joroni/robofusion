@@ -20,7 +20,8 @@ function setupDefaultView() {
     var bodyView = viewAssembler.defaultView(); 
     
     //Setup the default view
-    var defaultView = { title: "Welcome!", 
+   /* var defaultView = { title: "Welcome!", */
+    var defaultView = { title: "<img src='assets/graphics/buttonIcon.png'>", 
     view:  bodyView,
     };
     
