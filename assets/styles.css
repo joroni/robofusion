@@ -24,8 +24,9 @@ body {
 	background-color:#555;
 }
 * {
-    font-family:'SansationRegular', Arial, sans-serif;
+    font-family:'Roboto', sans-serif;
     letter-spacing: 0;
+	font-weight: 100;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
 }
 
@@ -93,7 +94,7 @@ body {
 /*ViewNavigator Styles*/
 
 .viewNavigator_header {
-    background:#444;
+    background:#ea148b;
     color:#444;
 }
 
@@ -101,6 +102,7 @@ body {
     color:#white;
     font-size:1.5em;
     max-width:65%;
+	font-weight:300;
 }
 
 .viewNavigator_backButton {
@@ -149,14 +151,23 @@ body {
     border-right:1px solid #999;
 }
 
-.viewNavigator_contentHolder > div:first-child {
+/*.viewNavigator_contentHolder > div:first-child {
     min-height:100%;
-    background:#EDEDED;
+    background:#EDEDED;*/
     /*background-image:url('graphics/wheat_bg.png');
     background-position: top left;
     background-repeat:repeat;*/
-    border-bottom:1px solid #444;
+   /* border-bottom:1px solid #444;
     border-top:1px solid #444;
+}
+*/
+
+
+.viewNavigator_contentHolder > div:first-child {
+    background: none repeat scroll 0 0 #ededed;
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    min-height: 100%;
 }
 
 
@@ -172,7 +183,7 @@ body {
     padding:1em;
 }
 
-.button {
+/*.button {
     padding:.5em;
     cursor:pointer;
     border:1px solid #999;
@@ -183,7 +194,7 @@ body {
 
 .button:active {
     background-color: #D9D900;
-}
+}*/
 
 .heading {
     background-color: #fff;
@@ -206,12 +217,25 @@ body {
     background-repeat:no-repeat;
 }
 
+.feature_img { 
+	width:80%;
+	background-image:url('graphics/wheat_bg.png');
+	}
 
-
+img {
+	max-width:100%;
+	min-height:100%;
+	max-height:100%;
+	min-width:100%;
+}
 @media only screen and (min-width:760px) {
     #defaultView {
         background-image:url('graphics/wheat_bg.png');
     }
+	.feature_img { 
+		width:80%;
+		background-image:url('graphics/wheat_bg.png');
+	}
 }
 
 #aboutView h2,
@@ -227,7 +251,7 @@ body {
     padding-top:0em;
 }
 
-#defaultView a {
+/*#defaultView a {
     height:100%;
     display:block;
     border:1px solid #999;
@@ -236,27 +260,35 @@ body {
     color:#444;
     font-size:1em;
     background:rgba(230,230,230,0.85);
+}*/
+
+#defaultView a {
+    height:100%;
+    display:block;
+    padding:1.25em;
+    text-decoration: none;
 }
+
 
 #defaultView a:active {
     background-color:#D9D900;
 }
 
-#defaultView #nearMe {
+#defaultView #nearMeX {
     padding-left:75px;
     background-image:url('graphics/map_marker.png');
     background-position: 15px center;
     background-repeat:no-repeat;
 }
 
-#defaultView #search {
+#defaultView #searchX {
     padding-left:75px;
     background-image:url('graphics/search.png');
     background-position: 5px center;
     background-repeat:no-repeat;
 }
 
-#defaultView #about {
+#defaultView #aboutX {
     padding-left:75px;
     background-image:url('graphics/info.png');
     background-position: 10px center;
@@ -493,4 +525,32 @@ label {
 #geoError div {
     padding:1.25em;
     padding-top:0px;
+}
+
+
+
+
+input[type="button"], input[type="submit"], input[type="reset"], .button {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #43b3e0;
+    background-image: url("graphics/bg.png"), -moz-linear-gradient(center top , rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)) !important;
+    background-origin: padding-box;
+    background-position: 0 0 !important;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border: 0 none;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5) inset, 0 2px 1px 0 rgba(255, 255, 255, 0.75) inset;
+    color: #fff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    outline: 0 none;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+	text-align: center;
+    text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s ease-in-out 0s;
 }
