@@ -21,7 +21,7 @@ function setupDefaultView() {
     
     //Setup the default view
    /* var defaultView = { title: "Welcome!", */
-    var defaultView = { title: "<img src='assets/graphics/buttonIcon.png'>", 
+    var defaultView = { title: "<img src='assets/graphics/buttonIcon.png' class='response'>", 
     view:  bodyView,
     };
     
@@ -102,6 +102,7 @@ function onSearchViewClick( event ) {
 function onNearbyViewClick( event ) {
 
     var view = { title: "Nearby",
+	 	backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.findNearbyView()
            };
     window.viewNavigator.pushView( view );
