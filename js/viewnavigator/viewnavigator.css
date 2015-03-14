@@ -50,12 +50,13 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	margin-right:auto;
 	text-align:center;
 	font-weight: bold;
-	color: #FFFFFF;
+	color: #FFF;
 	white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
-    
+    text-transform:uppercase;
+	 text-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.5);
     max-width:48%;
 }
 

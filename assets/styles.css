@@ -6,7 +6,7 @@
 -webkit-user-select: none;
 }
 
-input,
+/*input,
 textarea {
 	-webkit-touch-callout: auto;
 	-webkit-user-select: auto;
@@ -29,7 +29,7 @@ body {
 	font-weight: 100;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
 }
-
+*/
 
 
 .subtext {
@@ -105,7 +105,7 @@ body {
 	font-weight:300;
 }
 
-.viewNavigator_backButton {
+/*.viewNavigator_backButton {
     position:absolute;
     top:5px;
     left:5px;
@@ -120,6 +120,21 @@ body {
     background-image:url('graphics/back_arrow.png');
     background-position: 3px center;
     background-repeat:no-repeat;
+}
+*/
+
+.viewNavigator_backButton {
+    background: url("graphics/back_arrow.png") no-repeat scroll 3px center transparent;
+    border: 0 solid #999;
+    border-radius: 0;
+    box-shadow: 0 0 0 0;
+    color: rgba(0, 0, 0, 0);
+    height: 35px;
+    left: 5px;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    width: 40px;
 }
 
 @media only screen and (min-width:760px) {
@@ -212,14 +227,15 @@ body {
 }
 
 #defaultView {
-    background-image:url('graphics/wheat_bg_nocolor.png');
+    /*background-image:url('graphics/wheat_bg_nocolor.png');*/
+	 background-image:url('../images/header.jpg');
     background-position: bottom center;
     background-repeat:no-repeat;
 }
 
 .feature_img { 
 	width:80%;
-	background-image:url('graphics/wheat_bg.png');
+	/*background-image:url('graphics/wheat_bg.png');*/
 	}
 
 img {
@@ -228,13 +244,14 @@ img {
 	max-height:100%;
 	min-width:100%;
 }
+
 @media only screen and (min-width:760px) {
     #defaultView {
-        background-image:url('graphics/wheat_bg.png');
+        /*background-image:url('graphics/wheat_bg.png');*/
     }
 	.feature_img { 
 		width:80%;
-		background-image:url('graphics/wheat_bg.png');
+		/*background-image:url('graphics/wheat_bg.png');*/
 	}
 }
 
