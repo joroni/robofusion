@@ -151,25 +151,25 @@ body {
     border-right:1px solid #999;
 }
 
-/*.viewNavigator_contentHolder > div:first-child {
+.viewNavigator_contentHolder > div:first-child {
     min-height:100%;
-    background:#EDEDED;*/
-    /*background-image:url('graphics/wheat_bg.png');
+    background:#EDEDED;
+    background-image:url('graphics/wheat_bg.png');
     background-position: top left;
-    background-repeat:repeat;*/
-   /* border-bottom:1px solid #444;
+    background-repeat:repeat;
+    border-bottom:1px solid #444;
     border-top:1px solid #444;
 }
-*/
 
 
-.viewNavigator_contentHolder > div:first-child {
+
+/*.viewNavigator_contentHolder > div:first-child {
     background: none repeat scroll 0 0 #ededed;
     border-bottom: 1px solid #ededed;
     border-top: 1px solid #ededed;
     min-height: 100%;
 }
-
+*/
 
 /*APPLICATION VIEWS*/
 
@@ -217,7 +217,7 @@ body {
     background-repeat:no-repeat;
 }
 
-.feature_img { 
+/*.feature_img { 
 	width:80%;
 	background-image:url('graphics/wheat_bg.png');
 	}
@@ -227,7 +227,7 @@ img {
 	min-height:100%;
 	max-height:100%;
 	min-width:100%;
-}
+}*/
 @media only screen and (min-width:760px) {
     #defaultView {
         background-image:url('graphics/wheat_bg.png');
@@ -267,6 +267,7 @@ img {
     display:block;
     padding:1.25em;
     text-decoration: none;
+	background:rgba(230,230,230,0.85);
 }
 
 
@@ -533,7 +534,7 @@ label {
 input[type="button"], input[type="submit"], input[type="reset"], .button {
     background-attachment: scroll;
     background-clip: border-box;
-    background-color: #43b3e0;
+    background-color: #43b3e0 !important;
     background-image: url("graphics/bg.png"), -moz-linear-gradient(center top , rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)) !important;
     background-origin: padding-box;
     background-position: 0 0 !important;
