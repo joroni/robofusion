@@ -483,7 +483,7 @@ img.response {
     position:absolute;
 }
 
-#marketMapView #footer{
+/*#marketMapView #footer{
     top:0px;
     height:18px;
     right:0px;
@@ -491,7 +491,18 @@ img.response {
     padding:1em;
     padding-right:0.5em;
 	z-index:99;
+}*/
+
+#marketMapView #footer {
+    bottom: 2em;
+    height: 18px;
+    padding: 1em;
+    position: fixed;
+    right: 1em;
+    text-align: right;
+    z-index: 99;
 }
+
 
 #search_state {
     font-size:1.25em;
