@@ -584,7 +584,7 @@ div.mainNav div#nearMe, div.mainNav div#search {
 }
 
 div.paragraph a.button {
-	left:85%;
+	
 	margin:1em;
 }
 
@@ -596,7 +596,7 @@ div.paragraph a.button {
 #searchButton, #mapButton {
     padding-left:2em;
     padding-right:2em;
-	left:85%;
+
 }
 
 input[type='checkbox'] { 
