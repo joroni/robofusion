@@ -688,7 +688,6 @@ input[type="button"], input[type="submit"], input[type="reset"], .button {
 #defaultView a {
     background: none repeat scroll 0 0 rgba(230, 230, 230, 0.85);
     display: block;
-    height: 100%;
     padding: 1.25em;
     text-decoration: none;
     width: 115px;
