@@ -255,7 +255,7 @@ div.mainNav div p {
  div.mainNav div#nearMe a.button {
     background: none repeat scroll 0 0 rgba(174, 111, 151, 0.35) !important;
     border: 1px solid rgba(174, 111, 151, 0.85);
-    border-radius: 10px !important;
+    border-radius: 0.38em !important;
 }
 div#nearMe img, div#search img {
   padding: 1.5em 0;
@@ -712,13 +712,14 @@ input[type="button"], input[type="submit"], input[type="reset"], .button {
     text-align: center;
     max-width: 425px;
 }
-
-#defaultView a {
+defaultView a {
     background: none repeat scroll 0 0 rgba(230, 230, 230, 0.85);
     display: block;
+    float: left;
+    font-weight: 300 !important;
+    margin: 1em;
     padding: 1.25em;
     text-decoration: none;
-    width: 115px;
-	float:left;
-	margin:1em;
+    text-transform: uppercase;
+    max-width: 130px;
 }
