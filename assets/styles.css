@@ -229,7 +229,7 @@ body {
 #defaultView {
   /*  background-image:url('graphics/header.jpg');*/
    background-image:url('graphics/banner.jpg');
-  background-color:#ede7ec;
+  	background-color:#383733;
     background-position: bottom center;
     background-repeat:no-repeat;
 }
@@ -239,27 +239,10 @@ body {
 	background-image:url('graphics/wheat_bg.png');
 	}
 */
-img.response{
+img.response, div.mainNav a.button img {
 	min-height:100%;
 	max-height:100%;
 	
-}
-
-div.mainNav a.button img {
-	min-width:100%;
-	max-width:100%;
-}
-
-div.mainNav div#nearMe {
-    float: left;
-    text-align: center;
-    width: 175px;
-}
-
-div.mainNav div#search {
-    float: left;
-    text-align: center;
-    width: 175px;
 }
 
 div.mainNav div p {
@@ -274,7 +257,10 @@ div.mainNav div p {
     border: 1px solid rgba(174, 111, 151, 0.85);
     border-radius: 10px !important;
 }
-
+div#nearMe img, div#search img {
+  padding: 1.5em 0;
+    width: 95px;
+}
 
 div.mainNav div#search a.button {
     background: none repeat scroll 0 0 rgba(25, 109, 135, 0.35) !important;
@@ -287,15 +273,42 @@ div a#about.button {
 }
 
 @media only screen and (min-width:760px) {
-    #defaultView {
-      /*  background-image:url('graphics/header.jpg');*/
-	     background-image:url('graphics/banner.jpg');
-  background-color:#ede7ec;
-    }
-	/*.feature_img { 
-		width:80%;
-		background-image:url('graphics/wheat_bg.png');
-	}*/
+  #defaultView {
+    background: url("graphics/banner.jpg") no-repeat scroll 0 0 #383733;
+}
+
+div.mainNav div#nearMe {
+    margin-left: 10px;
+    position: relative;
+    text-align: center;
+    width: 175px;
+}
+
+div.mainNav div#search {
+    left: 1em;
+    position: relative;
+    text-align: center;
+    top: 0;
+    width: 175px;
+}
+
+
+
+	
+}
+
+@media only screen and (min-width:480px) {
+.mainNav {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    max-width: 425px;
+}
+
+div.mainNav div#nearMe, div.mainNav div#search {
+    float:left;
+}
+
 }
 
 #aboutView h2,
@@ -570,20 +583,26 @@ div a#about.button {
     width:97%%;
 }
 
+div.paragraph a.button {
+	left:85%;
+	margin:1em;
+}
 
 #search_searchPhrase {
     width:96%; 
     font-size:1.25em;
 }
 
-#searchButton {
+#searchButton, #mapButton {
     padding-left:2em;
     padding-right:2em;
+	left:85%;
 }
 
 input[type='checkbox'] { 
     width:2em;
     height:2em;
+	
 }
 
 label {
@@ -654,19 +673,22 @@ input[type="button"], input[type="submit"], input[type="reset"], .button {
 }*/
 
 input[type="button"], input[type="submit"], input[type="reset"], .button {
-	 background-color: #ae6f97 !important;
+    background-color: #ae6f97 !important;
     background-image: -moz-linear-gradient(center top , rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png") !important;
- border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
     border-top: 0 solid #a7120b !important;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset !important;
     color: #ddd !important;
     display: block;
     font-weight: 100 !important;
     letter-spacing: -0.008em;
+    max-width: 6em;
     padding: 14px 20px !important;
     position: relative;
+    text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(70, 70, 69, 0.5) !important;
+
 }
 
 #footer {
@@ -685,10 +707,10 @@ input[type="button"], input[type="submit"], input[type="reset"], .button {
 }
 
 .mainNav {
-    float: left;
-    margin-left: 20%;
-    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
     text-align: center;
+    max-width: 425px;
 }
 
 #defaultView a {
