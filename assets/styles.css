@@ -97,8 +97,9 @@ body {
 
 .viewNavigator_header {
    /* background:#ea148b;*/
-    color:#444;
-	   background-image:url('graphics/banner.jpg');
+    color:#eee;
+	   /*background-image:url('graphics/banner.jpg');*/
+	   background:#222;
 }
 
 .viewNavigator_header_title {
@@ -144,16 +145,22 @@ body {
 }
 
 .viewNavigator_content {
-    border-top:1px solid #999;
+   /* border-top:1px solid #999;*/
     background:#999;
     color:#444;
 }
-
+/*
 .viewNavigator_contentHolder {
     color:#444;
     background:#999;
     border-left:1px solid #999;
     border-right:1px solid #999;
+}
+
+*/
+.viewNavigator_contentHolder {
+    background: url("graphics/banner.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #444;
 }
 
 /*.viewNavigator_contentHolder > div:first-child {
@@ -172,8 +179,8 @@ body {
     background-color: #e8edec;
     background-position: left top;
     background-repeat: repeat;
-    border-bottom: 1px solid transparent;
-    border-top: 1px solid transparent;
+  /*  border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;*/
     min-height: 100%;
 }
 
@@ -252,20 +259,34 @@ div.mainNav div p {
 	font-size:0.9em;
 }
 
- div.mainNav div#nearMe a.button {
+/* div.mainNav div#nearMe a.button {
     background: none repeat scroll 0 0 rgba(174, 111, 151, 0.35) !important;
     border: 1px solid rgba(174, 111, 151, 0.85);
-    border-radius: 0.38em !important;
+    border-radius: 0 !important;
+}*/
+
+div.mainNav div#nearMe a.button {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid rgba(174, 111, 151, 0.85);
+    border-radius: 0 !important;
 }
+
 div#nearMe img, div#search img {
   padding: 1.5em 0;
     width: 95px;
 }
 
-div.mainNav div#search a.button {
+/*div.mainNav div#search a.button {
     background: none repeat scroll 0 0 rgba(25, 109, 135, 0.35) !important;
     border: 1px solid rgba(25, 109, 135, 0.85);
-    border-radius: 10px !important;
+    border-radius: 0 !important;
+}
+*/
+
+div.mainNav div#search a.button {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid rgba(174, 111, 151, 0.85);
+    border-radius: 0 !important;
 }
 
 div a#about.button {
@@ -277,21 +298,37 @@ div a#about.button {
     background: url("graphics/banner.jpg") no-repeat scroll 0 0 #383733;
 }
 
+/*div.mainNav div#nearMe {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 50%;
+	background:url('graphics/buttonNav-Nearby.png') no-repeat 50% 50% transparent;
+}*/
+
 div.mainNav div#nearMe {
-    margin-left: 10px;
-    position: relative;
+    background: url("graphics/buttonNav-Nearby.png") no-repeat scroll 50% 50% rgba(174, 111, 151, 1) !important;
+    left: 0;
+    position: absolute;
     text-align: center;
-    width: 175px;
+    width: 50%;
 }
-
 div.mainNav div#search {
-    left: 1em;
-    position: relative;
+    background: url("graphics/buttonNav-search.png") no-repeat scroll 50% 50% rgba(174, 111, 151, 1) !important;
+    left: 50%;
+    position: absolute;
     text-align: center;
-    top: 0;
-    width: 175px;
+    width: 50%;
 }
 
+/*div.mainNav div#search {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+   max-width: 50%;
+	background:url('graphics/buttonCube.png') no-repeat 50% 50% transparent;
+}
+*/
 
 
 	
@@ -302,33 +339,36 @@ div.mainNav div#search {
     margin: 0 auto;
     position: relative;
     text-align: center;
-    max-width: 425px;
+   
 }
 
-div.mainNav div#nearMe, div.mainNav div#search {
+
+/*div.mainNav div#nearMe, div.mainNav div#search {
     float:left;
 }
+
+*/
+
 
 }
 
 #aboutView h2,
 #defaultView h2 {
-    display:block;
-    padding:0em;
-    text-align:center;
-	color: #ddd !important;
+    color: #ddd !important;
     display: block;
     font-weight: 100 !important;
     letter-spacing: -0.008em;
     padding: 14px 20px !important;
     position: relative;
+    text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(70, 70, 69, 0.5) !important;
+    text-transform: uppercase;
 }
 #aboutView div,
 #defaultView div {
     display:block;
-    padding:1em;
+    padding:0;
     padding-top:0em;
 }
 
@@ -671,7 +711,7 @@ input[type="button"], input[type="submit"], input[type="reset"], .button {
 	text-align:center;
 	text-transform:uppercase;
 }*/
-
+/*
 input[type="button"], input[type="submit"], input[type="reset"], .button {
     background-color: #ae6f97 !important;
     background-image: -moz-linear-gradient(center top , rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png") !important;
@@ -682,13 +722,34 @@ input[type="button"], input[type="submit"], input[type="reset"], .button {
     display: block;
     font-weight: 100 !important;
     letter-spacing: -0.008em;
-    max-width: 6em;
+    max-width: 100%;
+	max-height:100%;
+	min-height:390px;
     padding: 14px 20px !important;
     position: relative;
     text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(70, 70, 69, 0.5) !important;
+}
+*/
 
+input[type="button"], input[type="submit"], input[type="reset"], .button {
+    background-image: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-top: 0 solid #a7120b !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset !important;
+    color: #ddd !important;
+    display: block;
+    font-weight: 100 !important;
+    letter-spacing: -0.008em;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 390px;
+    padding: 14px 20px !important;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(70, 70, 69, 0.5) !important;
 }
 
 #footer {
@@ -710,7 +771,9 @@ input[type="button"], input[type="submit"], input[type="reset"], .button {
     margin: 0 auto;
     position: relative;
     text-align: center;
-    max-width: 425px;
+    max-width: 100%;
+	
+	min-height:420px;
 }
 defaultView a {
     background: none repeat scroll 0 0 rgba(230, 230, 230, 0.85);

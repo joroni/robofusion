@@ -1,15 +1,15 @@
                             
 <div id="defaultView">
-   <!-- <h3>Fro-Style Cube Finder</h3>-->
+   <!-- <h2>Fro-Style Cube Finder</h2>-->
 <!-- Header -->
 			<div id="header-wrapper">
 				<div id="header">
 					
 					<!-- Logo -->
-					<!--	<h1><a href="index.html">Dopetrope</a></h1>-->
+						<h1><a href="index.html">Dopetrope</a></h1>
 					
 					<!-- Nav -->
-						<!--<nav id="nav">
+						<nav id="nav">
 							<ul>
 								<li class="current"><a href="index.html">Home</a></li>
 								<li>
@@ -35,57 +35,49 @@
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="no-sidebar.html">No Sidebar</a></li>
 							</ul>
-						</nav>-->
+						</nav>
 
 					<!-- Banner -->
-						<!--<section id="banner">
+						<section id="banner">
 							<header>
-								<h3>Howdy. This is Dopetrope.</h3>
+								<h2>Howdy. This is Dopetrope.</h2>
 								<p>A responsive template by HTML5 UP</p>
 							</header>
-						</section>-->
+						</section>
 
 					<!-- Intro -->
 						<section id="intro" class="container">
 							<div class="row">
 								<div class="4u">
-                                <section class="first">
-									<a id="nearMe" href="#">
-									<i class="icon featured fa-map-marker"></i>
-
-                                    <!--	<i class="icon featured fa-cog"></i>-->
+									<a id="nearMe" href="#"><section class="first">
+										<i class="icon featured fa-cog"></i>
 										<header>
-											<h3>Nearby</h3>
+											<h2>Ipsum consequat</h2>
 										</header>
-										</a>
-									</section>
+										<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+									</section></a>
 								</div>
-								<div class="4u middle">
-                               
+								<div class="4u">
+                                <a id="search" href="#">
 									<section class="middle">
-                                     <a id="search" href="#">
-										<i class="icon featured alt fa-search"></i>
+										<i class="icon featured alt fa-flash"></i>
 										<header>
-											<h3>All Over</h3>
+											<h2>Magna etiam dolor</h2>
 										</header>
-										 </a>
+										<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
 									</section>
-                                   
+                                    </a>
 								</div>
-								<div class="4u last">
-                               
+								<div class="4u">
+                                <a id="about" href="#">
 									<section class="last">
-                                     <a id="about" href="#">
-										<!--<i class="icon featured alt2 fa-star"></i>-->
-                                        <i class="icon featured alt2 fa-frostyle">
-                                        <img src="assets/graphics/rni-cube.png" />
-                                        </i>
+										<i class="icon featured alt2 fa-star"></i>
 										<header>
-											<h3>The Cube</h3>
+											<h2>Tempus adipiscing</h2>
 										</header>
-										 </a>
+										<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
 									</section>
-                                   
+                                    </a>
 								</div>
 							</div>
                             
@@ -120,7 +112,7 @@
     <!--<div id="footer">
     <section class="footer_inner">
    <!-- <img src="../assets/graphics/cube.png" />-->
-  <!-- <div><a id="about" href="#" class="button">About This App</a></div>
+   <div><a id="about" href="#" class="button">About This App</a></div>
    </section>
     </div>-->
 </div>

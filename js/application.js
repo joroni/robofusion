@@ -21,7 +21,7 @@ function setupDefaultView() {
     
     //Setup the default view
    /* var defaultView = { title: "Welcome!", */
-    var defaultView = { title: "<img src='assets/graphics/buttonIcon.png' class='response'>", 
+    var defaultView = { title: "<img src='assets/graphics/rni-logo.svg' class='response'>", 
     view:  bodyView,
     };
     
