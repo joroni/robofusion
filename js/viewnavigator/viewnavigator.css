@@ -26,7 +26,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	padding:0px;
 }
 
-.viewNavigator_header_backlink {
+/*.viewNavigator_header_backlink {
 	position:absolute;
 	top:0px;
 	left:0px;
@@ -39,7 +39,16 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     
     max-width:30%;
 }
-
+*/
+.viewNavigator_header_backlink {
+    background-image: url("../../assets/graphics/back_arrow.png") !important;
+    max-width: 30%;
+    min-height: 2.2em !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 2.5em;
+    z-index: 2;
+	}
 /*.viewNavigator_header_title {
 
 	position:absolute;
@@ -172,3 +181,6 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 {
 	background-color: #ddd;
 }
+
+
+
