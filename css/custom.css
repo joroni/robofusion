@@ -12,24 +12,27 @@ background:url('graphics/cube.png') no-repeat scroll center center #333;
 	 
 
 #intro h3 {
-    font-size: 1.25em;
+    font-size: 1em;
 	text-transform:uppercase;
+	font-weight:300;
+	color:#ffffff;
 }
 .viewNavigator_header_title {
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 300;
     left: 0;
     margin-left: auto;
-    margin-right: 1em;
-    max-width: 48%;
-    overflow: hidden;
+    margin-right: auto;
+   
+    overflow: visible;
     position: absolute;
     right: 0;
-    text-align: right;
+    text-align: center;
     text-overflow: ellipsis;
-    top: 0.5em !important;
+   
     white-space: nowrap;
 }
+
 .viewNavigator_header {
     height: 46px;
 	background: url('images/bg.png') repeat 0 0 #c21e7d !important;
@@ -40,6 +43,10 @@ background:url('graphics/cube.png') no-repeat scroll center center #333;
 img.response, div.mainNav a.button img, .icon.featured.alt2.fa-frostyle img {
 	min-height:100%;
 	max-height:100%;
+}
+
+img.response {
+	height: 1em !important;
 }
 .icon.featured.alt2.fa-frostyle img {
 	height:195px;
@@ -204,7 +211,8 @@ a:link, a:hover, a  {
     padding: 0;
  }*/
  
- #defaultView div {
+ #defaultView div
+	 {
     display:block;
     padding:0;
     padding-top:0em;
@@ -214,6 +222,20 @@ a:link, a:hover, a  {
 	background-attachment: fixed;
 	background-repeat: repeat;
 	
+}
+
+
+
+.viewNavigator_contentHolder {
+    background-color: #364050;
+	background-image: url("images/bg01.png");
+    bottom: 0;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
  
 div#header header h2 {
@@ -496,6 +518,7 @@ label {
 }
 #intro section.first, #intro section.last {
     border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+	 border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
     margin: 0 !important;
     padding: 2.5em 0 0 !important;
     position: relative;
@@ -511,7 +534,7 @@ background: none #e91e63;
 	}
 
 	.row {
-    margin: 0px 0 -1px 0px !important;
+    margin: 10px 0 10px 0px !important;
 }
 
 #footer {

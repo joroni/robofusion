@@ -342,7 +342,12 @@ div.mainNav div#search {
    
 }
 
-
+#intro h3 {
+    font-size: 0.8em;
+	text-transform:uppercase;
+	font-weight:300 !important;
+	color:#ffffff;
+}
 /*div.mainNav div#nearMe, div.mainNav div#search {
     float:left;
 }
