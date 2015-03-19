@@ -1,7 +1,7 @@
 		.viewNavigator_header_title {
 			font-size: 1em !important;
-			min-width: 1em !important;
-			max-width:30% !important;
+			/*min-width: 1em !important;
+			max-width:30% !important;*/
 			font-weight:100 !important;
 			text-transform:uppercase !important;
 		}
@@ -26,10 +26,19 @@
 		}
 		
 		#header, .viewNavigator_header{
-			background: none repeat scroll 0 0 #2d3033;
+			/*background: none repeat scroll 0 0 #2d3033;*/
 			height: 47px;
 			margin: 0;
 			position: relative;
+			
+			background: #63676d !important; /* Old browsers */
+			background: -moz-linear-gradient(top, #63676d 0%, #28343b 100%)!important; /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#63676d), color-stop(100%,#28343b))!important; /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, #63676d 0%,#28343b 100%)!important;/* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, #63676d 0%,#28343b 100%)!important;; /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, #63676d 0%,#28343b 100%)!important; /* IE10+ */
+			background: linear-gradient(to bottom, #63676d 0%,#28343b 100%)!important;/* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63676d', endColorstr='#28343b',GradientType=0 )!important; /* IE6-9 */
 		}
 
 		a#nearMe.button {
