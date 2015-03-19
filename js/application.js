@@ -1,4 +1,4 @@
-HTMLElement.prototype.originalRemoveEventListener
+/*HTMLElement.prototype.originalRemoveEventListener
         = HTMLElement.prototype.removeEventListener;
  
 HTMLElement.prototype.removeEventListener = function(type, listener, useCapture)
@@ -6,7 +6,7 @@ HTMLElement.prototype.removeEventListener = function(type, listener, useCapture)
     console.log('remove: ' + type);
     this.originalRemoveEventListener(type, listener, useCapture);
 };
-
+*/
 
 var markets = [];
 var viewAssembler = new ViewAssembler();
@@ -229,7 +229,7 @@ function showMarketDetailsFromMapClick( index ) {
     
 function showMarketDetails( item ) { 
     var market = arrayToMarketObject(item);
-    var view = { title: "Cube Detail",
+    var view = { title: "Market Detail",
              backLabel: (isTablet() ? "Back" : " "),
              view: viewAssembler.marketDetailsView( market )
            };
@@ -239,14 +239,12 @@ function showMarketDetails( item ) {
 function onSearchButtonClick( event ) {
     var criteria = {};
     
-   /* var fields = ["state", "searchPhrase", 
+    var fields = ["state", "searchPhrase", 
                   "credit", "wiccash", "sfmnp", "snap",
                   "bakedGoods", "cheese", "crafts",
                   "flowers", "seafood", "fruit", "herbs", "vegetables", "honey", "jams", "maple",
-                  "meat", "nuts", "plants", "soap"];*/
-   var fields = ["state", "searchPhrase", 
-                  "credit", "wiccash", "sfmnp", "snap",
-                  "bakedGoods", "cheese", "crafts"];  
+                  "meat", "nuts", "plants", "soap"];
+    
     for ( var index in fields ) {
         var field = fields[ index ];
         var $input = $("#search_" + field);
@@ -304,7 +302,7 @@ function marketRowMatchesCriteria( row, criteria ) {
     if ( criteria.bakedGoods == true )  {    if ( row[16] != "Y" ) return false;    };
     if ( criteria.cheese == true )      {    if ( row[17] != "Y" ) return false;    };
     if ( criteria.crafts == true )      {    if ( row[18] != "Y" ) return false;    };
-    /*if ( criteria.flowers == true )     {    if ( row[19] != "Y" ) return false;    };
+    if ( criteria.flowers == true )     {    if ( row[19] != "Y" ) return false;    };
     if ( criteria.seafood == true )     {    if ( row[20] != "Y" ) return false;    };
     if ( criteria.fruit == true )       {    if ( row[21] != "Y" ) return false;    };
     if ( criteria.herbs == true )       {    if ( row[22] != "Y" ) return false;    };
@@ -315,7 +313,7 @@ function marketRowMatchesCriteria( row, criteria ) {
     if ( criteria.meat == true )        {    if ( row[27] != "Y" ) return false;    };
     if ( criteria.nuts == true )        {    if ( row[28] != "Y" ) return false;    };
     if ( criteria.plants == true )      {    if ( row[29] != "Y" ) return false;    };
-    if ( criteria.soap == true )        {    if ( row[31] != "Y" ) return false;    };*/
+    if ( criteria.soap == true )        {    if ( row[31] != "Y" ) return false;    };
     
     //searchString last
     if ( criteria.searchPhrase != undefined && criteria.searchPhrase.length > 0 ) {
@@ -351,8 +349,7 @@ function criteriaToString( criteria ) {
 }
 
 function arrayToMarketObject( arr ) {
-   /* var fields=["fmid","marketName","website","street","city","county","state","zip","x","y","location","credit","wic","wiccash","sfmnp","snap","bakedgoods","cheese","crafts","flowers","seafood","fruit","herbs","vegetables","honey","jams","maple","meat","nuts","plants","prepared","soap","index"];*/
-	 var fields=["fmid","marketName","website","street","city","county","state","zip","x","y","location","credit","wic","wiccash","sfmnp","snap","bakedgoods","cheese","crafts","index"];
+    var fields=["fmid","marketName","website","street","city","county","state","zip","x","y","location","credit","wic","wiccash","sfmnp","snap","bakedgoods","cheese","crafts","flowers","seafood","fruit","herbs","vegetables","honey","jams","maple","meat","nuts","plants","prepared","soap","index"];
     var result = {};
     for ( var index in arr ) {
         if ( index <= 10 || index >= 32 ) {
@@ -363,10 +360,8 @@ function arrayToMarketObject( arr ) {
         }
     }
     
-/*    result.paymentDetail = result.credit || result.wic || result.wicash || result.sfmnp || result.snap;
-    result.productDetail = result.bakedgoods || result.cheese || result.crafts || result.flowers || result.seafood || result.fruit || result.herbs || result.vegetables || result.honey || result.jams || result.maple || result.meat || result.nuts || result.plants || result.prepared || result.soap;*/
-	result.paymentDetail = result.credit || result.wic || result.wicash || result.sfmnp || result.snap;
-    result.productDetail = result.bakedgoods || result.cheese || result.crafts;
+    result.paymentDetail = result.credit || result.wic || result.wicash || result.sfmnp || result.snap;
+    result.productDetail = result.bakedgoods || result.cheese || result.crafts || result.flowers || result.seafood || result.fruit || result.herbs || result.vegetables || result.honey || result.jams || result.maple || result.meat || result.nuts || result.plants || result.prepared || result.soap;
     
     return result;
 }
