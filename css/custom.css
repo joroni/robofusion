@@ -257,7 +257,8 @@ color: #FFF;
 #defaultView a {
     height:100%;
     display:block;
-    padding:1.25em;
+    /*padding:1.25em;*/
+    padding: 0;
     text-decoration: none;
 	/*background:rgba(230,230,230,0.85);*/
 }
@@ -282,6 +283,13 @@ color: #FFF;
     background-position: 10px center;
     background-repeat:no-repeat;
 }
+
+.image.featured {
+    display: block;
+    margin: 0 0 0em !important;
+    width: 100%;
+}
+
 #findMarketsNearMeView {
 }
 #aboutView {
@@ -504,41 +512,63 @@ label {
     padding:1em;
 }
 .icon.ifeatured::before {
-    color: #fff;
-    font-size: 8em !important;
+    color: #fff !important;
+	font-size:4em;
     line-height: 1em;
 }
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FFF !important;
+    font-weight: 700;
+}
+
+div#header section#intro.container p {
+	padding:1em;
+	text-align:justify;
+	margin-bottom:0 !important;
+	background:url('images/overlay') repeat scroll 0 0 #e8edec;
+}
+
 .\34 u, .\34 u\$ {
     clear: none;
     margin-left: 0;
     width: 50% !important;
+	text-align:center;
 }
 #titleBar .toggle::before {
 	display:none !important;
 }
-#intro section.first, #intro section.last {
+#intro section.first, #intro section.last, section.first, section.last{
     border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
 	 border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
     margin: 0 !important;
     padding: 2.5em 0 0 !important;
     position: relative;
 }
-#intro section.first {
+#intro section.first, section.first {
 background: none #f57c00;
    /* box-shadow: -0.1em 0 0.35em 0 rgba(0, 0, 0, 0.15) inset;*/
 	}
 
-#intro section.last {
+#intro section.last, section.last {
 background: none #e91e63;
    /* box-shadow: -0.1em 0 0.35em 0 rgba(0, 0, 0, 0.15) inset;*/
 	}
 
 	.row {
-    margin: 10px 0 10px 0px !important;
+    margin: 0px 0 0px 0px !important;
 }
 
 #footer {
-position:absolute;
-bottom:0;
+position:relative;
+bottom:0 !important;
 width:100%;
 }	
+
+#intro section.footer_inner {
+    border-top: 1px solid #dfdfdf;
+    margin: 0 0 !important;
+    padding: 1em 0 0 !important;
+   
+}
