@@ -25,7 +25,8 @@
 		section,
 		article
 		{
-			margin: 0 0 1.5em 0 !important;
+		/*	margin: 0 0 1.5em 0 !important;*/
+			margin: 0 0 1.5em 0;
 		}
 
 		header
@@ -292,6 +293,7 @@ h1, h2, h3, h4, h5, h6 {
 			padding: 2.5em 0 0 0;
 			margin: 1.5em 0 0 0 !important;
 		}
+
 
 			#intro section.first
 			{
