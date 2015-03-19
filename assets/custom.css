@@ -1,0 +1,106 @@
+		.viewNavigator_header_title {
+			font-size: 1em !important;
+			min-width: 1em !important;
+			max-width:30% !important;
+			font-weight:100 !important;
+			text-transform:uppercase !important;
+		}
+		
+		.responsiveImg {
+			min-width:100%;
+			max-width:100%;
+		}
+		#defaultView {
+			background-image: none !important;
+			background-color: #FFF !important;
+			background-position: center bottom;
+			background-repeat: no-repeat;
+			bottom: 0 !important;
+			position: fixed !important;
+			padding-top:2em !important;
+			width: 100% !important;
+		}
+		.viewNavigator_contentHolder > div:first-child {
+			background: none repeat scroll 0 0 #fff !important;
+			
+		}
+		
+		#header, .viewNavigator_header{
+			background: none repeat scroll 0 0 #2d3033;
+			height: 47px;
+			margin: 0;
+			position: relative;
+		}
+
+		a#nearMe.button {
+			background-color: #c8711a !important;
+		}
+		
+		a#search.button {
+			background-color: #a70664 !important;
+		}
+		
+		a.button {
+			background-color: #c94663;
+			background-image: url("images/bg01.png") !important;
+			background-repeat: repeat !important;
+			border-radius: 0.4em !important;
+			border:none !important;
+			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+			color: #fff !important;
+			cursor: pointer !important;
+			font-family: "Roboto",sans-serif;
+			font-weight: 700;
+			text-align: center !important;
+			text-decoration: none;
+			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2) !important;
+			transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s !important;
+		}
+		
+		.viewNavigator_backButton {
+			background: url("graphics/back_arrow.png") no-repeat scroll 3px center #c94663 !important;
+			border-radius: 0.4em !important;
+			border:none !important;
+			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15) inset !important;
+			color: #fff !important;
+			cursor: pointer !important;
+			font-family: "Roboto",sans-serif !important;
+		
+			text-align: center !important;
+			text-decoration: none;
+			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2) !important;
+			transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s !important;
+			
+			content:icon !important;
+			
+			height: 35px;
+			left: 5px;
+			padding: 0;
+			position: absolute;
+			top: 5px;
+			width: 40px;
+		}
+		
+		.icon.ifeatured::before {
+			color: #fff;
+			line-height: 1em;
+			font-size: 2em;
+			margin-right: 0.5em;
+		}
+		.icon::before {
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+		
+		.fa-map-marker::before {
+			content: "ï��";
+		}
+		.icon::before {
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+

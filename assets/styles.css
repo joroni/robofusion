@@ -1,5 +1,6 @@
-
-
+@charset 'UTF-8';
+@import url("font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,100,300,500");
 
 * {
 -webkit-touch-callout: none;
@@ -24,11 +25,10 @@ body {
 	background-color:#555;
 }
 * {
-    font-family:'Roboto', sans-serif;
+  /*  font-family:'SansationRegular', Arial, sans-serif;*/
+  font-family: 'Roboto', sans-serif;
     letter-spacing: 0;
-	font-weight: 100;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
-	
 }
 
 
@@ -36,7 +36,6 @@ body {
 .subtext {
     font-size:0.85em;
     font-color: #888;
-	text-shadow:0 1px 0.5px rgba(255,255,255,1);
 }
 
 .data-list {
@@ -87,28 +86,23 @@ body {
 }
 
 .listSelected {
-	color:#FFF;
+	color:#333;
 	border-top:1px solid #094C99;
-	background-color: #ae6f97;
+	background-color: #D9D900;
 }
 
 
 /*ViewNavigator Styles*/
 
 .viewNavigator_header {
-   /* background:#ea148b;*/
-    color:#eee;
-	   /*background-image:url('graphics/banner.jpg');*/
-	   background:#222;
+    background:#444;
+    color:#444;
 }
 
 .viewNavigator_header_title {
-    color:#fff;
-	text-shadow:0 -1px 0.5px rgba(0,0,0,1);
-    font-size:1em;
-    max-width:75%;
-	font-weight:100;
-	height:25px;
+    color:#white;
+    font-size:1.5em;
+    max-width:65%;
 }
 
 .viewNavigator_backButton {
@@ -119,8 +113,8 @@ body {
     color: rgba(0,0,0,0);
     height:35px;
     box-shadow: 0 0 0 0;
-    background: none;
-    border-right:1px solid #888;
+    background: #DEDEDE;
+    border:1px solid #999;
     padding:0px;
     border-radius:0px;
     background-image:url('graphics/back_arrow.png');
@@ -136,20 +130,20 @@ body {
         padding-left:50px;
         padding-top:9px;
         height:26px;
-        color: #ddd;
+        color: #444;
     }
 }
 
 .viewNavigator_backButton:active {
-    background-color: #ae6f97;
+    background-color: #D9D900;
 }
 
 .viewNavigator_content {
-   /* border-top:1px solid #999;*/
+    border-top:1px solid #999;
     background:#999;
     color:#444;
 }
-/*
+
 .viewNavigator_contentHolder {
     color:#444;
     background:#999;
@@ -157,41 +151,16 @@ body {
     border-right:1px solid #999;
 }
 
-*/
-.viewNavigator_contentHolder {
-    background: url("graphics/banner.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
-    color: #444;
-}
-
-/*.viewNavigator_contentHolder > div:first-child {
-    min-height:100%;
-   /*  background-image:url('graphics/header.jpg');*/
- /* background-color:#e8edec;
-    background-position: top left;
-    background-repeat:repeat;
-    border-bottom:1px solid #444;
-    border-top:1px solid #EDEDED;
-}
-*/
-
-
 .viewNavigator_contentHolder > div:first-child {
-    background-color: #e8edec;
-    background-position: left top;
-    background-repeat: repeat;
-  /*  border-bottom: 1px solid transparent;
-    border-top: 1px solid transparent;*/
-    min-height: 100%;
+    min-height:100%;
+    background:#EDEDED;
+    /*background-image:url('graphics/wheat_bg.png');
+    background-position: top left;
+    background-repeat:repeat;*/
+    border-bottom:1px solid #444;
+    border-top:1px solid #444;
 }
 
-
-/*.viewNavigator_contentHolder > div:first-child {
-    background: none repeat scroll 0 0 #ededed;
-    border-bottom: 1px solid #ededed;
-    border-top: 1px solid #ededed;
-    min-height: 100%;
-}
-*/
 
 /*APPLICATION VIEWS*/
 
@@ -205,7 +174,7 @@ body {
     padding:1em;
 }
 
-/*.button {
+.button {
     padding:.5em;
     cursor:pointer;
     border:1px solid #999;
@@ -216,7 +185,7 @@ body {
 
 .button:active {
     background-color: #D9D900;
-}*/
+}
 
 .heading {
     background-color: #fff;
@@ -234,150 +203,33 @@ body {
 }
 
 #defaultView {
-  /*  background-image:url('graphics/header.jpg');*/
-   background-image:url('graphics/banner.jpg');
-  	background-color:#383733;
+    background-image:url('graphics/wheat_bg_nocolor.png');
     background-position: bottom center;
     background-repeat:no-repeat;
 }
 
-/*.feature_img { 
-	width:80%;
-	background-image:url('graphics/wheat_bg.png');
-	}
-*/
-img.response, div.mainNav a.button img {
-	min-height:100%;
-	max-height:100%;
-	
-}
 
-div.mainNav div p {
-	width:100%;
-	text-align:center;
-	color:#FFF;
-	font-size:0.9em;
-}
-
-/* div.mainNav div#nearMe a.button {
-    background: none repeat scroll 0 0 rgba(174, 111, 151, 0.35) !important;
-    border: 1px solid rgba(174, 111, 151, 0.85);
-    border-radius: 0 !important;
-}*/
-
-div.mainNav div#nearMe a.button {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: 1px solid rgba(174, 111, 151, 0.85);
-    border-radius: 0 !important;
-}
-
-div#nearMe img, div#search img {
-  padding: 1.5em 0;
-    width: 95px;
-}
-
-/*div.mainNav div#search a.button {
-    background: none repeat scroll 0 0 rgba(25, 109, 135, 0.35) !important;
-    border: 1px solid rgba(25, 109, 135, 0.85);
-    border-radius: 0 !important;
-}
-*/
-
-div.mainNav div#search a.button {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: 1px solid rgba(174, 111, 151, 0.85);
-    border-radius: 0 !important;
-}
-
-div a#about.button {
-	background: none !important;
-}
 
 @media only screen and (min-width:760px) {
-  #defaultView {
-    background: url("graphics/banner.jpg") no-repeat scroll 0 0 #383733;
-}
-
-/*div.mainNav div#nearMe {
-    left: 0;
-    position: absolute;
-    text-align: center;
-    width: 50%;
-	background:url('graphics/buttonNav-Nearby.png') no-repeat 50% 50% transparent;
-}*/
-
-div.mainNav div#nearMe {
-    background: url("graphics/buttonNav-Nearby.png") no-repeat scroll 50% 50% rgba(174, 111, 151, 1) !important;
-    left: 0;
-    position: absolute;
-    text-align: center;
-    width: 50%;
-}
-div.mainNav div#search {
-    background: url("graphics/buttonNav-search.png") no-repeat scroll 50% 50% rgba(174, 111, 151, 1) !important;
-    left: 50%;
-    position: absolute;
-    text-align: center;
-    width: 50%;
-}
-
-/*div.mainNav div#search {
-    left: 50%;
-    position: absolute;
-    text-align: center;
-   max-width: 50%;
-	background:url('graphics/buttonCube.png') no-repeat 50% 50% transparent;
-}
-*/
-
-
-	
-}
-
-@media only screen and (min-width:480px) {
-.mainNav {
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-   
-}
-
-#intro h3 {
-    font-size: 0.8em;
-	text-transform:uppercase;
-	font-weight:300 !important;
-	color:#ffffff;
-}
-/*div.mainNav div#nearMe, div.mainNav div#search {
-    float:left;
-}
-
-*/
-
-
+    #defaultView {
+        background-image:url('graphics/wheat_bg.png');
+    }
 }
 
 #aboutView h2,
 #defaultView h2 {
-    color: #ddd !important;
-    display: block;
-    font-weight: 100 !important;
-    letter-spacing: -0.008em;
-    padding: 14px 20px !important;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 0 1px 0 rgba(70, 70, 69, 0.5) !important;
-    text-transform: uppercase;
+    display:block;
+    padding:0em;
+    text-align:center;
 }
 #aboutView div,
 #defaultView div {
     display:block;
-    padding:0;
+    padding:1em;
     padding-top:0em;
 }
 
-/*#defaultView a {
+#defaultView a {
     height:100%;
     display:block;
     border:1px solid #999;
@@ -386,36 +238,27 @@ div.mainNav div#search {
     color:#444;
     font-size:1em;
     background:rgba(230,230,230,0.85);
-}*/
-
-#defaultView a {
-    height:100%;
-    display:block;
-    padding:1.25em;
-    text-decoration: none;
-	background:rgba(230,230,230,0.85);
 }
-
 
 #defaultView a:active {
-    background-color:#ae6f97;
+    background-color:#D9D900;
 }
 
-#defaultView #nearMeX {
+#defaultView #nearMe {
     padding-left:75px;
     background-image:url('graphics/map_marker.png');
     background-position: 15px center;
     background-repeat:no-repeat;
 }
 
-#defaultView #searchX {
+#defaultView #search {
     padding-left:75px;
     background-image:url('graphics/search.png');
     background-position: 5px center;
     background-repeat:no-repeat;
 }
 
-#defaultView #aboutX {
+#defaultView #about {
     padding-left:75px;
     background-image:url('graphics/info.png');
     background-position: 10px center;
@@ -602,7 +445,7 @@ div.mainNav div#search {
     position:absolute;
 }
 
-/*#marketMapView #footer{
+#marketMapView #footer{
     top:0px;
     height:18px;
     right:0px;
@@ -610,44 +453,27 @@ div.mainNav div#search {
     padding:1em;
     padding-right:0.5em;
 	z-index:99;
-}*/
-
-#marketMapView #footer {
-    bottom: 2em;
-    height: 18px;
-    padding: 1em;
-    position: fixed;
-    right: 1em;
-    text-align: right;
-    z-index: 99;
 }
-
 
 #search_state {
     font-size:1.25em;
-    width:97%%;
+    width:100%;
 }
 
-div.paragraph a.button {
-	
-	margin:1em;
-}
 
 #search_searchPhrase {
     width:96%; 
     font-size:1.25em;
 }
 
-#searchButton, #mapButton {
+#searchButton {
     padding-left:2em;
     padding-right:2em;
-
 }
 
 input[type='checkbox'] { 
     width:2em;
     height:2em;
-	
 }
 
 label {
@@ -669,125 +495,4 @@ label {
 #geoError div {
     padding:1.25em;
     padding-top:0px;
-}
-
-
-
-/*
-input[type="button"], input[type="submit"], input[type="reset"], .button {
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-color: #43b3e0 !important;
-    background-image: url("graphics/bg.png"), -moz-linear-gradient(center top , rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)) !important;
-    background-origin: padding-box;
-    background-position: 0 0 !important;
-    background-repeat: repeat;
-    background-size: auto auto;
-    border: 0 none;
-    border-radius: 8px;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5) inset, 0 2px 1px 0 rgba(255, 255, 255, 0.75) inset;
-    color: #fff !important;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 700;
-    outline: 0 none;
-    overflow: hidden;
-    position: relative;
-    text-decoration: none;
-	text-align: center;
-    text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s ease-in-out 0s;
-	padding:0.8em;
-}*/
-
-/*input[type="button"], input[type="submit"], input[type="reset"], .button {
-    background-color: #ae6f97 !important;
-    background-image: -moz-linear-gradient(center top , rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png") !important;
-    border: 0 none;
-    border-radius: 0;
-    color: #fff !important;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0.75em 2.5em;
-    position: relative;
-    text-decoration: none;
-    transition: background-color 0.35s ease-in-out 0s;
-	text-shadow:0 -1px 0.5px rgba(0,0,0,1);
-	text-align:center;
-	text-transform:uppercase;
-}*/
-/*
-input[type="button"], input[type="submit"], input[type="reset"], .button {
-    background-color: #ae6f97 !important;
-    background-image: -moz-linear-gradient(center top , rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png") !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-    border-top: 0 solid #a7120b !important;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset !important;
-    color: #ddd !important;
-    display: block;
-    font-weight: 100 !important;
-    letter-spacing: -0.008em;
-    max-width: 100%;
-	max-height:100%;
-	min-height:390px;
-    padding: 14px 20px !important;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 0 1px 0 rgba(70, 70, 69, 0.5) !important;
-}
-*/
-
-input[type="button"], input[type="submit"], input[type="reset"], .button {
-    background-image: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-    border-top: 0 solid #a7120b !important;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset !important;
-    color: #ddd !important;
-    display: block;
-    font-weight: 100 !important;
-    letter-spacing: -0.008em;
-    max-height: 100%;
-    max-width: 100%;
-    min-height: 390px;
-    padding: 14px 20px !important;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 0 1px 0 rgba(70, 70, 69, 0.5) !important;
-}
-
-#footer {
-    bottom: 0;
-    left: 0;
-    max-height: 80px;
-    position: fixed;
-    width: 100%;
-}
-
-.footer_inner {
-
-	float:right;
-	padding:1em;
-	
-}
-
-.mainNav {
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-    max-width: 100%;
-	
-	min-height:420px;
-}
-defaultView a {
-    background: none repeat scroll 0 0 rgba(230, 230, 230, 0.85);
-    display: block;
-    float: left;
-    font-weight: 300 !important;
-    margin: 1em;
-    padding: 1.25em;
-    text-decoration: none;
-    text-transform: uppercase;
-    max-width: 130px;
 }
