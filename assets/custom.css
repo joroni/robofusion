@@ -58,9 +58,11 @@
 		
 		a.button {
 			background-color: #a70664;
-			/*background-image: url("images/bg01.png") !important;*/
-            background-image: -moz-linear-gradient(center top , rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png") !important;
-            
+			/*background-image: url("images/bg01.png") !important;
+            background-image: -moz-linear-gradient(center top , rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png") !important;*/
+            background-image: url("images/overlay.png") !important;
+            @include filter-gradient(#a3447a, #a70664, vertical) !important;
+            @include background-image(linear-gradient(top,  #a3447a 0%,#a70664 100%)) !important;
 			background-repeat: repeat !important;
 			border-radius: 0.4em !important;
 			border:none !important;
