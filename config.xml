@@ -81,7 +81,7 @@
   <gap:plugin name="org.apache.cordova.vibration"/>
     
     
-    
+ 
 
     
   <icon src="icon.png"/>

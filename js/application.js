@@ -1,11 +1,11 @@
-HTMLElement.prototype.originalRemoveEventListener
+/*HTMLElement.prototype.originalRemoveEventListener
         = HTMLElement.prototype.removeEventListener;
  
 HTMLElement.prototype.removeEventListener = function(type, listener, useCapture)
 {
     console.log('remove: ' + type);
     this.originalRemoveEventListener(type, listener, useCapture);
-};
+};*/
 
 
 var markets = [];
@@ -112,7 +112,7 @@ function onNearbyViewClick( event ) {
 }
 
 var onGeoSuccess = function(position) {
-   /* console.log('Latitude: '          + position.coords.latitude          + '\n' +
+ console.log('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
           'Accuracy: '          + position.coords.accuracy          + '\n' +
@@ -120,7 +120,7 @@ var onGeoSuccess = function(position) {
           'Heading: '           + position.coords.heading           + '\n' +
           'Speed: '             + position.coords.speed             + '\n' +
           'Timestamp: '         + new Date(position.timestamp)      + '\n');
-     */
+ 
     var latitude = parseFloat( position.coords.latitude );
     var longitude = parseFloat( position.coords.longitude );
     
@@ -229,7 +229,7 @@ function showMarketDetailsFromMapClick( index ) {
     
 function showMarketDetails( item ) { 
     var market = arrayToMarketObject(item);
-    var view = { title: "Market Detail",
+    var view = { title: "Cube Detail",
              backLabel: (isTablet() ? " " : " "),
              view: viewAssembler.marketDetailsView( market )
            };
@@ -370,7 +370,7 @@ function openExternalURL( url ) {
 
     var result=confirm("You will leave the Cube Finder App.  Continue?");
     if (result==true) {
-        window.open( url, '_blank' );
+        window.open( url, '_system' );
     }
 }
 
@@ -395,7 +395,7 @@ function getDirections( index ) {
         var android = navigator.userAgent.search( "Android" ) >= 0;
         
         /*if (win) {
-            window.open( ('maps:' + market.y + ',' + market.x), '_blank' );
+            window.open( ('maps:' + market.y + ',' + market.x), '_system' );
         } 
         else 
         */
@@ -403,7 +403,7 @@ function getDirections( index ) {
             navigator.app.loadUrl( 'http://maps.google.com/maps?q=' + market.y + ',' + market.x);
         }
         else {
-            window.open( ('http://maps.google.com/maps?q=' + market.y + ',' + market.x), '_blank' );
+            window.open( ('http://maps.google.com/maps?q=' + market.y + ',' + market.x), '_system' );
         }
     }
 }
