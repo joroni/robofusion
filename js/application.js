@@ -1,4 +1,4 @@
-/*HTMLElement.prototype.originalRemoveEventListener
+HTMLElement.prototype.originalRemoveEventListener
         = HTMLElement.prototype.removeEventListener;
  
 HTMLElement.prototype.removeEventListener = function(type, listener, useCapture)
@@ -6,7 +6,7 @@ HTMLElement.prototype.removeEventListener = function(type, listener, useCapture)
     console.log('remove: ' + type);
     this.originalRemoveEventListener(type, listener, useCapture);
 };
-*/
+
 
 var markets = [];
 var viewAssembler = new ViewAssembler();
@@ -33,7 +33,7 @@ function setupDefaultView() {
 
 function onMapButtonClick( event ) {
     var view = { title: "Map",
-             backLabel: (isTablet() ? "Back" : " "),
+             backLabel: (isTablet() ? " " : " "),
              view: viewAssembler.mapView(),
              scroll:false
            };
@@ -68,7 +68,7 @@ function onSearchResultMapButtonClick( event ) {
     centerPoint = new L.LatLng(centerPoint.y, centerPoint.x);
 
     var view = { title: "Map",
-             backLabel: (isTablet() ? "Back" : " "),
+             backLabel: (isTablet() ? " " : " "),
              view: viewAssembler.mapView(centerPoint),
              scroll:false
            };
@@ -80,7 +80,7 @@ function onSearchResultMapButtonClick( event ) {
 
 function onAboutViewClick( event ) {
     var view = { title: "About",
-             backLabel: (isTablet() ? "Back" : " "),
+             backLabel: (isTablet() ? " " : " "),
              view: viewAssembler.aboutView()
            };
     window.viewNavigator.pushView( view );
@@ -90,7 +90,7 @@ function onAboutViewClick( event ) {
 
 function onSearchViewClick( event ) {
     var view = { title: "List",
-             backLabel: (isTablet() ? "Back" : " "),
+             backLabel: (isTablet() ? " " : " "),
              view: viewAssembler.searchView(),
            };
     window.viewNavigator.pushView( view );
@@ -129,7 +129,7 @@ var onGeoSuccess = function(position) {
         var filtered = filterMarketsByGeo( latitude, longitude );
             
         var view = { title: "Nearby",
-             backLabel: (isTablet() ? "Back" : " "),
+             backLabel: (isTablet() ? " " : " "),
              view: viewAssembler.findNearbyView()
            };
            
@@ -149,7 +149,7 @@ function onGeoError(error) {
     //wait for transition complete
     setTimeout( function() {
         var view = { title: "Nearby",
-                 backLabel: (isTablet() ? "Back" : " "),
+                 backLabel: (isTablet() ? " " : " "),
                  view: viewAssembler.geoPermissionDenied()
                };
         window.viewNavigator.replaceView( view );
@@ -230,7 +230,7 @@ function showMarketDetailsFromMapClick( index ) {
 function showMarketDetails( item ) { 
     var market = arrayToMarketObject(item);
     var view = { title: "Market Detail",
-             backLabel: (isTablet() ? "Back" : " "),
+             backLabel: (isTablet() ? " " : " "),
              view: viewAssembler.marketDetailsView( market )
            };
     window.viewNavigator.pushView( view );
@@ -267,7 +267,7 @@ function onSearchButtonClick( event ) {
     
     var markets = filterMarketsBySearchCriteria( criteria );
     var view = { title: "Search Results",
-             backLabel: (isTablet() ? "Back" : " "),
+             backLabel: (isTablet() ? " " : " "),
              view: viewAssembler.searchResultsView( markets, criteria )
            };
     window.viewNavigator.pushView( view );
@@ -378,7 +378,7 @@ function viewInMap( index ) {
     var market = arrayToMarketObject( markets[index] );
     
      var view = { title: market.marketName,
-             backLabel: (isTablet() ? "Back" : " "),
+             backLabel: (isTablet() ? " " : " "),
              view: viewAssembler.marketMapView( market ),
              scroll:false
            };

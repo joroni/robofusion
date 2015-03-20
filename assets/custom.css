@@ -50,7 +50,7 @@
 		}
 		
 		a.button {
-			background-color: #c94663;
+			background-color: #a70664;
 			background-image: url("images/bg01.png") !important;
 			background-repeat: repeat !important;
 			border-radius: 0.4em !important;
@@ -59,7 +59,7 @@
 			color: #fff !important;
 			cursor: pointer !important;
 			font-family: "Roboto",sans-serif;
-			font-weight: 700;
+			font-weight: 300 !important;
 			text-align: center !important;
 			text-decoration: none;
 			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2) !important;
@@ -67,34 +67,31 @@
 		}
 		
 		.viewNavigator_backButton {
-			background: url("graphics/back_arrow.png") no-repeat scroll 3px center #c94663 !important;
-			border-radius: 0.4em !important;
-			border:none !important;
-			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15) inset !important;
-			color: #fff !important;
-			cursor: pointer !important;
-			font-family: "Roboto",sans-serif !important;
-		
-			text-align: center !important;
-			text-decoration: none;
-			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2) !important;
-			transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s !important;
-			
-			content:icon !important;
-			
-			height: 35px;
-			left: 5px;
-			padding: 0;
-			position: absolute;
-			top: 5px;
-			width: 40px;
-		}
+            background: url("graphics/back_arrow.png") no-repeat scroll 5px center transparent !important;
+            border: medium none !important;
+            border-radius: 0 !important;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15) inset !important;
+            color: #fff !important;
+            cursor: pointer !important;
+            font-family: "Roboto",sans-serif !important;
+            height: 35px;
+            left: -5px !important;
+            padding: 0.5em 0 !important;
+            position: absolute;
+            text-align: center !important;
+            text-decoration: none;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2) !important;
+            top: -5px !important;
+            transition: background-color 0.25s ease-in-out 0s, color 0.25s ease-in-out 0s !important;
+            width: 40px;
+        }
 		
 		.icon.ifeatured::before {
 			color: #fff;
 			line-height: 1em;
 			font-size: 2em;
 			margin-right: 0.5em;
+            margin-left: -2em;
 		}
 		.icon::before {
 			font-family: FontAwesome;
@@ -112,4 +109,36 @@
 			font-weight: normal;
 			text-transform: none !important;
 		}
+
+        .warning {          
+            background-color: #8fc800 !important; 
+            @include filter-gradient(#8fc800, #8fc800, vertical) !important; 
+            @include background-image(linear-gradient(top,  #8fc800 0%,#8fc800 100%)) !important;
+            color:#006e2e !important;
+            border: none !important;
+        }
+
+        .data-list li {
+            background-image: url("graphics/more_disclosure.png");
+            background-color: #eaeaea !important;
+            @include filter-gradient(#eaeaea, #f9f9f9, vertical) !important;
+            @include background-image(linear-gradient(top, #eaeaea 0%,#f9f9f9 100%)) !important;
+            background-position: right center;
+            background-repeat: no-repeat;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #fff;
+            cursor: pointer;
+            display: block;
+            font-size: 1em;
+            padding: 1em 1px 1em 1em;
+        }
+
+        .leaflet-popup-content a {
+            background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+            border: medium none;
+            color: #006e2e !important;
+            font-weight: 700 !important;
+            text-align: center;
+            text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.8) !important;
+        }
 
