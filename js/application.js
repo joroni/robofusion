@@ -20,7 +20,7 @@ function setupDefaultView() {
     var bodyView = viewAssembler.defaultView(); 
     
     //Setup the default view
-   var defaultView = { title: "<img src='assets/graphics/rf-logo3.svg' class='responsiveImg'>", 
+   var defaultView = { title: "<img src='assets/graphics/rf-logo3.svg' class='responsiveImg' style='height:30px;'>", 
     view:  bodyView,
     };
     
